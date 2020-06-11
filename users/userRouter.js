@@ -17,7 +17,7 @@ router.post('/', validateUser(), (req, res) => {
 
 router.post('/:id/posts', validateUserId(), validatePost(), (req, res) => {
   // do your magic!
-  postsDb.insert(req.params.id, req.body.text)
+  postsDb.insert(req.body)
   .then((post) => {
     res.json(post)
   })
