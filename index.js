@@ -23,7 +23,7 @@ function logger(req, res, next) {
 }
 
 server.listen(port, () => {
-  console.log("server started at port 9066")
+  console.log(`server started at port ${port}`)
 })
 
 module.exports = server;
